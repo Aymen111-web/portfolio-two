@@ -23,6 +23,4 @@ The website is designed to provide a clean and professional presentation of my w
 - **JavaScript** – Interactivity and dynamic content
 - **Google Fonts / Font Awesome** – Typography and icons
 
----
 
-## File Structure
