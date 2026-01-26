@@ -13,7 +13,7 @@ The website is designed to provide a clean and professional presentation of my w
 - **Projects Showcase**: Interactive project cards displaying my work.
 - **About Me Section**: Information about my background, skills, and interests.
 - **Contact Form**: Simple form to reach out via email (can be enhanced with backend support).
-- **Animations & Effects**: Subtle animations using CSS and JavaScript for a modern feel.
+
 
 ---
 
