@@ -15,8 +15,8 @@
     --divider-color-end: rgba(248, 249, 250, 1);
     --neon-blue: #2563eb;
     --neon-purple: #9333ea;
-    --particle-color: rgba(0, 0, 0, 0.15);
-    /* Dark particles for light mode */
+    --particle-color: rgba(0, 0, 0, 0.3);
+    /* Darker particles for visibility */
 }
 
 [data-theme="dark"] {
@@ -56,11 +56,11 @@
 .glow-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.2;
-    /* Increased for better visibility in light mode */
+    filter: blur(80px);
+    /* Reduced blur for higher intensity */
+    opacity: 0.35;
+    /* Increased opacity */
     mix-blend-mode: multiply;
-    /* Better for light backgrounds */
     animation: drift-orb var(--duration) infinite ease-in-out;
 }
 
