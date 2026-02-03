@@ -53,12 +53,15 @@ body {
     transition: background-color 0.3s ease;
     border-bottom: 1px solid rgba(128, 128, 128, 0.1);
 }
+
 .navbar-brand {
     font-weight: 700;
 }
+
 .nav-link {
     font-weight: 600;
 }
+
 .nav-link:hover {
     color: var(--primary-blue) !important;
 }
@@ -111,15 +114,56 @@ body {
     animation: float 20s infinite linear;
     z-index: 1;
 }
-.shape1 { width: 80px; height: 80px; top: 15%; left: 10%; animation-duration: 25s; }
-.shape2 { width: 120px; height: 120px; top: 70%; left: 80%; animation-duration: 18s; }
-.shape3 { width: 50px; height: 50px; top: 40%; left: 50%; animation-duration: 22s; }
-.shape4 { width: 150px; height: 150px; top: 20%; left: 75%; animation-duration: 30s; border-radius: 50%;}
-.shape5 { width: 60px; height: 60px; top: 80%; left: 20%; animation-duration: 15s; }
+
+.shape1 {
+    width: 80px;
+    height: 80px;
+    top: 15%;
+    left: 10%;
+    animation-duration: 25s;
+}
+
+.shape2 {
+    width: 120px;
+    height: 120px;
+    top: 70%;
+    left: 80%;
+    animation-duration: 18s;
+}
+
+.shape3 {
+    width: 50px;
+    height: 50px;
+    top: 40%;
+    left: 50%;
+    animation-duration: 22s;
+}
+
+.shape4 {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: 75%;
+    animation-duration: 30s;
+    border-radius: 50%;
+}
+
+.shape5 {
+    width: 60px;
+    height: 60px;
+    top: 80%;
+    left: 20%;
+    animation-duration: 15s;
+}
 
 @keyframes float {
-    0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(-1000px) rotate(720deg); }
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+    }
 }
 
 /* --- Section Styling --- */
@@ -136,7 +180,6 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
 }
 
 .soft-divider {
@@ -161,7 +204,8 @@ section {
     text-align: center;
     box-shadow: 0 10px 30px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%; /* Ensure cards are same height */
+    height: 100%;
+    /* Ensure cards are same height */
 }
 
 .skill-card:hover {
@@ -172,6 +216,10 @@ section {
 .skill-card i {
     font-size: 3rem;
     margin-bottom: 15px;
+    display: block;
+}
+
+.skill-card i:not(.colored) {
     background: var(--gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -270,12 +318,15 @@ footer {
     #hero h1 {
         font-size: 2.5rem;
     }
+
     #hero .tagline {
         font-size: 1.2rem;
     }
+
     .section-title {
         font-size: 2rem;
     }
+
     section {
         padding: 60px 0;
     }
