@@ -233,6 +233,13 @@ section {
     background-clip: text;
 }
 
+.section-subtitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
 .soft-divider {
     height: 100px;
     background-image: linear-gradient(to bottom, var(--divider-color-start), var(--divider-color-end));
