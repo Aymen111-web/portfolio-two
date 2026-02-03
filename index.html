@@ -53,36 +53,18 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="text-center">
-            <!-- Floating shapes for background -->
-            <div class="floating-shape shape1"></div>
-            <div class="floating-shape shape2"></div>
-            <div class="floating-shape shape3"></div>
-            <div class="floating-shape shape4"></div>
-            <div class="floating-shape shape5"></div>
-
+            <div class="anti-gravity-bg" id="hero-bg"></div>
             <div class="container hero-content">
                 <img src="image/port (1).png" alt="Aymen Mohammed" class="profile-img mb-4 scroll-animate">
                 <h1 class="mb-3 scroll-animate" data-delay="100">Aymen Mohammed</h1>
                 <p class="tagline mb-4 scroll-animate" data-delay="200">Software Developer | Future Innovator</p>
-
             </div>
         </section>
 
         <!-- About Me Section -->
         <section id="about">
-            <ul class="bg-bubbles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div class="container text-center" style="position: relative; z-index: 1;">
+            <div class="anti-gravity-bg" id="about-bg"></div>
+            <div class="container text-center section-content">
                 <h2 class="section-title scroll-animate">About Me</h2>
                 <p class="scroll-animate" data-delay="100">
                     I am a passionate Software Engineering student from Ethiopia who loves solving problems, building
@@ -153,26 +135,14 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
 
         <div class="soft-divider"></div>
 
         <!-- Projects Section -->
-        <section id="projects" style="background-color: var(--card-bg);">
-            <ul class="bg-bubbles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div class="container" style="position: relative; z-index: 1;">
+        <section id="projects">
+            <div class="anti-gravity-bg" id="projects-bg"></div>
+            <div class="container section-content">
                 <h2 class="section-title text-center scroll-animate">My Projects</h2>
                 <div class="row g-4">
                     <!-- Project 1 -->
@@ -322,7 +292,8 @@
 
         <!-- Contact Section -->
         <section id="contact">
-            <div class="container">
+            <div class="anti-gravity-bg" id="contact-bg"></div>
+            <div class="container section-content">
                 <h2 class="section-title text-center scroll-animate">Get In Touch</h2>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -370,6 +341,45 @@
 
     <!-- Custom JS -->
     <script src="script.js"></script>
+
+    <!-- Background Particle Script -->
+    <script>
+        function createBackground(elementId) {
+            const container = document.getElementById(elementId);
+            if (!container) return;
+
+            // Add glow orbs
+            for (let i = 0; i < 3; i++) {
+                const orb = document.createElement('div');
+                orb.className = `glow-orb ${i % 2 === 0 ? 'orb-blue' : 'orb-purple'}`;
+                orb.style.top = Math.random() * 100 + '%';
+                orb.style.left = Math.random() * 100 + '%';
+                orb.style.setProperty('--duration', (15 + Math.random() * 10) + 's');
+                container.appendChild(orb);
+            }
+
+            // Add particles
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.setProperty('--duration', (5 + Math.random() * 10) + 's');
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createBackground('hero-bg');
+            createBackground('about-bg');
+            createBackground('projects-bg');
+            createBackground('contact-bg');
+        });
+    </script>
 </body>
 
 </html>
