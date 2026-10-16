@@ -55,12 +55,26 @@ document.addEventListener('DOMContentLoaded', function() {
     handleScrollAnimation();
     window.addEventListener('scroll', handleScrollAnimation);
 
+    // --- Download & Open CV Functionality ---
+    const downloadCvBtn = document.getElementById('download-cv-btn');
+    if (downloadCvBtn) {
+        downloadCvBtn.addEventListener('click', function() {
+            const downloadLink = document.createElement('a');
+            downloadLink.href = 'Resume.pdf';
+            downloadLink.download = 'Aymen_Mohammed_Resume.pdf';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        });
+    }
+
     // --- Contact Form Submission ---
     const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your message! (This is a demo)');
-        contactForm.reset();
-    });
-
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! (This is a demo)');
+            contactForm.reset();
+        });
+    }
 });
